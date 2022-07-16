@@ -1,0 +1,25 @@
+<div id="app">
+    @@include('partials/top-bar.html', {})
+
+    <main class="default-lr-padding">
+      <nav>
+        <ul class="header">
+          <li class="normals">Autoryzuj odbiorcę</li>
+        </ul>
+      </nav>
+      <header>
+        <p class="font-color-light bolds">W celu autoryzacji  konieczne jest zeskanowanie <br/>
+          dokumentu tożsamości. Proszę włożyć dokument<br>
+          tożsamości (dowód osobisty lub paszport) do skanera,<br/>
+          który znajduje się w dolnej części kiosku.</p>
+          @@include('partials/presentation.html', {})
+          <nav>
+            <ul class="ulinput">
+              <li onclick="document.location='./page4.html'" class="bolds inputnext">BACK</li>
+              <li onclick="document.location='./page6.html'" class="bolds inputnext">NEXT</li>
+            </ul>
+          </nav>
+      </header>
+    </main>
+    @@include('partials/footer.html', {})
+  </div>

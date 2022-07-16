@@ -1,0 +1,17 @@
+<div id="app">
+    @@include('partials/top-bar.html', {})
+    <main class="default-lr-padding">
+      <header>
+        <p class="font-color-light bolds">Autoryzacja tożsamości przebiegła pomyślnie.<br/>
+          Odbierz przesyłkę ze skrytki.</p> 
+      </header>
+      @@include('partials/nav4.html', {})
+      <nav>
+        <ul class="ulinput">
+          <li onclick="document.location='./page5.html'" class="bolds inputnext">BACK</li>
+          <li onclick="document.location='./page7.html'" class="bolds inputnext">NEXT</li>
+        </ul>
+      </nav>
+    </main>
+    @@include('partials/footer.html', {})
+  </div>

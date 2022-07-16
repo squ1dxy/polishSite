@@ -1,0 +1,42 @@
+@import "fonts", "colors";
+
+footer{
+  //&.top-bar{
+  //  background-color: map-get($background-color, red);
+  //  height: calculateRem(220px);
+  //}
+  background-color: map-get($background-color, light-gray);
+  height: calculateRem(295.3px);
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  display: flex;
+
+  .btn-icon{
+    margin: auto;
+    width: calculateRem(150px);
+    position: relative;
+    text-align: center;
+    font-size: calculateRem(25px);
+
+    &:hover img{
+      //background-color: red;
+      //-webkit-mask: url(assets/images/back.svg) no-repeat center;
+      //mask: url(assets/images/back.svg) no-repeat center;
+    }
+
+    &:first-child{
+      margin-left: 0;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+

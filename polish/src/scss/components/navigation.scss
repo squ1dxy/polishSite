@@ -1,0 +1,60 @@
+@import "fonts", "colors";
+
+nav{
+  position: relative;
+
+  ul{
+    padding: 0;
+    //padding-top: calculateRem(30px);
+    margin: 0;
+
+    &.header{
+      &:before{
+        content: "";
+        width: calculateRem(3px);
+        height: 100%;
+        top: 0;
+        left: 50%;
+        position: absolute;
+        z-index: -1;
+        background-color: #9CAAB2;
+      }
+      padding: 0;
+      margin: 0;
+      margin-bottom: calculateRem(130px);
+    }
+
+    &:not(.header){
+      li{
+
+        background-color: map-get($background-color, white);
+        color: map-get($font-color, light);
+
+        &:active{
+          background-color: map-get($background-color, red);
+          color: map-get($font-color, white);
+          transition:background 200ms;
+        }
+      }
+    }
+
+    li{
+      background-color: map-get($background-color, gray);
+      color: map-get($font-color, white);
+      padding: calculateRem(55px);
+      list-style: none;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.65);
+      margin: calculateRem(30px) 0;
+      border-radius: 1rem;
+      //width: calculateRem(941.7px);
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+}

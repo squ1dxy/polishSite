@@ -1,0 +1,68 @@
+@import "fonts", "colors";
+
+#VirtualKey {
+  text-align: center;
+  display: flex;
+  margin-top: calculateRem(60px);
+
+  .key-row{
+    //max-width: 80vh;
+    position: relative;
+    display: block;
+  }
+
+  #key-wrapper{
+    //max-width: 80vh;
+    margin: auto;
+    display: block;
+    //position: relative;
+    //display: block;
+  }
+
+  input {
+    cursor: none;
+    //padding: calculateRem(55px);
+    list-style: none;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+    //margin: calculateRem(15px);
+    margin: 0.6rem;
+    border-radius: 1rem;
+    border-width: 0;
+    background-color: map-get($background-color, white);
+    color: map-get($font-color, light);
+    //letter-spacing: 0.5rem;
+    //width: 100%;
+    box-sizing: border-box;
+    line-height: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    user-select: none;
+    //margin: 0;
+    //&:after {
+    //  content: "_______"
+    // }
+    &:active {
+      //background-color: map-get($font-color, light);
+      ////background-color: red;
+      //box-shadow: 0 5px #666;
+      //transform: translateY(4px);
+      background-color: #9caab2;
+      /* box-shadow: 0 5px #666; */
+      transform: scale(0.9);
+      color: white;
+    }
+    &:focus{
+      outline: none;
+    }
+
+    &#btn0{
+      float: left;
+    }
+    &#btnDel{
+      //padding: calc(2.5rem + 0.6rem);
+      float: right;
+      //padding: 2.5rem 2.9rem
+    }
+  }
+}

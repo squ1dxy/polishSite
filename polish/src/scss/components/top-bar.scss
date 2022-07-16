@@ -1,0 +1,59 @@
+@import "fonts", "colors";
+
+nav{
+  &.top-bar{
+    background-color: map-get($background-color, red);
+    height: calculateRem(220px);
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+
+    .image{
+         margin: auto;
+         //margin-left: 0;
+         height: calculateRem(87.8px);
+         position: relative;
+
+         img{
+           //he
+           height: 100%;
+         }
+    }
+
+    .languages{
+      //display: flex;
+      //width: 100%;
+      margin: auto;
+      margin-right: 0;
+      .language{
+        float: left;
+        //margin:auto;
+        padding: calculateRem(30px);
+        position: relative;
+        line-height: 0;
+
+        img{
+          max-width: calculateRem(61px);
+        }
+
+        &:after{
+          content: "";
+          width: calculateRem(3px);
+          height: 100%;
+          background-color:  white;
+          position: absolute;
+          left: 100%;
+          top: 0;
+        }
+
+        &:last-child{
+          &:after{
+            display: none;
+          }
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

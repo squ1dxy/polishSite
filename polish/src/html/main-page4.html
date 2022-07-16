@@ -1,0 +1,18 @@
+<div id="app">
+    @@include('partials/top-bar.html', {})
+    <main class="default-lr-padding">
+      <header>
+        <p class="font-color-light bolds">Twoja przesyłka awizowana numer:</p>
+        @@include('partials/number7.html', {})
+        <p class="font-color-light bolds lowerb">jest do odebrania w tym kiosku.</p>
+      </header>
+      @@include('partials/nav3.html', {})
+      <nav>
+        <ul class="ulinput">
+          <li onclick="document.location='./page3.html'" class="bolds inputnext">BACK</li>
+          <li onclick="document.location='./page5.html'" class="bolds inputnext">NEXT</li>
+        </ul>
+      </nav>
+    </main>
+    @@include('partials/footer.html', {})
+  </div>

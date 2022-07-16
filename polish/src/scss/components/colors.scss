@@ -1,0 +1,24 @@
+//@use "sass:meta";
+
+$background-color: (
+  red: #FF2E17,
+  white: #FFF,
+  gray: #9CAAB2,
+  light-gray: #E3EBEE
+);
+
+$default-background-color: map-get($background-color, white);
+
+$font-color: (
+  light: #9caab2,
+  white: #fff,
+  normal: #4E565F
+);
+
+$default-font-color: map-get($font-color, normal);
+
+@each $name, $value in $font-color {
+  .font-color-#{$name} {
+    color: $value;
+  }
+}

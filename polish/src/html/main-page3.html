@@ -1,0 +1,18 @@
+<div id="app">
+  @@include('partials/top-bar.html', {})
+    <main class="default-lr-padding">
+      <header>
+        <p class="font-color-light bolds">Zbliż awizo do czytnika<br/>kodu kreskowego.</p>
+        <p class="font-color-light bolds">Awizo trzymaj w odległości<br/>ok. 5 cm od czytnika.</p>
+        @@include('partials/presentation.html', {})
+        <nav>
+          <ul class="ulinput">
+            <li onclick="document.location='./page2.html'" class="bolds inputnext">BACK</li>
+            <li onclick="document.location='./page4.html'" class="bolds inputnext">NEXT</li>
+          </ul>
+        </nav>
+      </header>
+    </main>
+  @@include('partials/footer.html', {})
+
+  </div>

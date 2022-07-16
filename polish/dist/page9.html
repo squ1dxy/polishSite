@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Page9</title>
+</head>
+<body>
+  <header>
+  
+</header>
+  <div id="app">
+    <nav class="top-bar default-lr-padding">
+    <div class="image">
+        <img src="images/poczta_logo.svg"/>
+    </div>
+    <div class="languages">
+        <div class="language"><img src="images/pl.svg"></div>
+        <div class="language"><img src="images/uk.svg"/></div>
+        <div class="language"><img src="images/en.svg"/></div>
+    </div>
+</nav> 
+    <main class="default-lr-padding">
+      <header>
+        <p class="font-color-light bolds">Dziękujemy za skorzystanie<br/>
+          z naszy usług.</p>
+      </header>
+      <div class="row">
+    <label class="font-color-light bolds" style="text-align: center;">Numer telefonu:</label>
+    <form>
+        <input class="inputs" value="_________" pattern="[0-9]" maxlength="9" minlength="9" autofocus/>
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+<!--        <input class="inputs" placeholder="_" pattern="[0-9]" maxlength="1"/>-->
+    </form>
+<!--    <label><h4 style="margin: 0">Numer telefonu:</h4></label>-->
+<!--    <input name="test" value="_________"/>-->
+</div>
+
+<!--<input id="tbInput" type="text" maxlength="9" />--> 
+      <div id="VirtualKey">
+    <div id="key-wrapper">
+        <div class="key-row">
+            <input id="btn1" type="button" value="1" onclick="input(this);" />
+            <input id="btn2" type="button" value="2" onclick="input(this);" />
+            <input id="btn3" type="button" value="3" onclick="input(this);" />
+        </div>
+        <div class="key-row">
+            <input id="btn4" type="button" value="4" onclick="input(this);" />
+            <input id="btn5" type="button" value="5" onclick="input(this);" />
+            <input id="btn6" type="button" value="6" onclick="input(this);" />
+        </div>
+        <div class="key-row">
+            <input id="btn7" type="button" value="7" onclick="input(this);" />
+            <input id="btn8" type="button" value="8" onclick="input(this);" />
+            <input id="btn9" type="button" value="9" onclick="input(this);" />
+        </div>
+        <div class="key-row">
+            <input id="btn0" type="button" value="0" onclick="input(this)" />
+            <input id="btnDel" type="button" value="Backspace" onclick="del();" />
+        </div>
+    </div>
+</div>
+
+<script>
+    function input(e) {
+        var tbInput = window.currentSelected;
+        if( tbInput != null ) {
+            // var length = tbInput.minLength;
+            var currArrayValue = tbInput.value.split("");
+            var indexOf = currArrayValue.indexOf("_");
+            if (indexOf < tbInput.maxLength) {
+                currArrayValue[indexOf] = e.value;
+                // console.log(currArrayValue.join(""));
+                tbInput.value = currArrayValue.join("");
+            }
+            tbInput.focus();
+        }
+    }
+
+    function del() {
+        var tbInput = window.currentSelected;
+        if( tbInput != null ) {
+            // var tbInput = document.getElementById("tbInput");
+            var currArrayValue = tbInput.value.split("");
+            var indexOf = currArrayValue.indexOf("_")-1;
+            if(indexOf === -2){
+                indexOf = currArrayValue.length-1;
+            }
+            if (indexOf >= 0) {
+                currArrayValue[indexOf] = "_";
+                // console.log(currArrayValue.join(""));
+                tbInput.value = currArrayValue.join("");
+            }
+            // tbInput.value = tbInput.value.substr(0, tbInput.value.length - 1);
+            // tbInput.value = tbInput.value + "_";
+            tbInput.focus();
+        }
+    }
+
+    // dos
+
+    // windows
+</script> 
+      <nav>
+        <ul class="ulinput">
+          <li onclick="document.location='./page8.html'" class="bolds inputnext">BACK</li>
+          <li onclick="document.location='./page10.html'" class="bolds inputnext">NEXT</li>
+        </ul>
+      </nav>
+    </main>
+    <footer class="default-lr-padding box-sizing">
+<!--    <nav>-->
+        <div class="btn-icon font-color-light lowerb"><img src="images/btnContrast.svg">KONTRAST</div>
+        <div class="btn-icon font-color-light"><img src="images/btnAa.svg">WIELKOŚĆ LITER</div>
+        <div class="btn-icon font-color-light"><img src="images/btnMouse.svg">OBSŁUGA GŁOSOWA</div>
+        <div class="btn-icon font-color-light long"><img src="images/btnInv.svg">OBSŁUGA</div>
+        <div class="btn-icon font-color-light bigiconn"><img src="images/back.svg">COFNIJ</div>
+<!--    </nav>-->
+</footer> 
+  </div>
+  <footer></footer>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

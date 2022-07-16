@@ -1,0 +1,23 @@
+@import "fonts", "colors";
+header.test {
+
+}
+header{
+  padding: 0;
+  text-align: center;
+  //line-height: 0.8rem;
+
+  h2{
+    margin: 1rem;
+  }
+  &#test{
+
+  }
+  p:last-child{
+    margin-bottom:0
+  }
+
+  p:first-child{
+    margin-top: 0;
+  }
+}
